@@ -17,7 +17,7 @@
     "tape": "^3.5.0"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "node test/"
   },
   "keywords": [
     "object,css,selector"
