@@ -1,0 +1,33 @@
+{
+  "name": "cssobject-from-selector",
+  "version": "1.0.0",
+  "description": "Pass an object defining css a function will be returned. Pass selectors to the returned function to get merged css objects",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Mikko Haapoja",
+    "email": "me@mikkoh.com",
+    "url": "https://github.com/mikkoh"
+  },
+  "dependencies": {
+    "merge": "^1.2.0",
+    "parse-selector": "^1.0.0"
+  },
+  "devDependencies": {
+    "tape": "^3.5.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "object,css,selector"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Jam3/cssobject-from-selector.git"
+  },
+  "homepage": "https://github.com/Jam3/cssobject-from-selector",
+  "bugs": {
+    "url": "https://github.com/Jam3/cssobject-from-selector/issues"
+  }
+}
