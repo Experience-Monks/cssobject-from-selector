@@ -1,6 +1,6 @@
 {
   "name": "cssobject-from-selector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pass an object defining css a function will be returned. Pass selectors to the returned function to get merged css objects",
   "main": "index.js",
   "license": "MIT",
