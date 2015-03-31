@@ -21,7 +21,7 @@ module.exports = function cssGet(css) {
 
 	cssGet.fromElIdClassName = function(el, id, className) {
 
-		var cssToApply = [];
+		var cssToApply = {};
 		var classNamesSplit = className.split('.').slice(1);
 		
 		if(css) {
@@ -32,7 +32,7 @@ module.exports = function cssGet(css) {
 				className = '.' + className;
 
 				if(css[className]) {
-					cssToApply.push(css[className]);
+					cssToApply = merge(cssToApply, css[className]);
 				}
 			});
 
@@ -42,22 +42,22 @@ module.exports = function cssGet(css) {
 				className = '.' + classNamesSplit.slice(0, i + 1).join('.');
 				
 				if(css[className]) {
-					cssToApply.push(css[className]);
+					cssToApply = merge(cssToApply, css[className]);
 				}
 			}
 
 			//id
 			if(css[id]) {
-				cssToApply.push(css[id]);
+				cssToApply = merge(cssToApply, css[id]);
 			}
 
 			//element
 			if(css[el]) {
-				cssToApply.push(css[el]);
+				cssToApply = merge(cssToApply, css[el]);
 			}
 		}
 
-		return merge.apply(undefined, cssToApply);
+		return cssToApply;
 	};
 
 	return cssGet;
