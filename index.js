@@ -22,7 +22,7 @@ module.exports = function cssGet(css) {
 	cssGet.fromElIdClassName = function(el, id, className) {
 
 		var cssToApply = {};
-		var classNamesSplit = className.split('.').slice(1);
+		var classNamesSplit = className ? className.split('.').slice(1) : [];
 		
 		if(css) {
 
